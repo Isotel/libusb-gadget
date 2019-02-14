@@ -1,3 +1,5 @@
+AM_CPPFLAGS = -I$(top_srcdir)/include
+
 noinst_PROGRAMS = loopback loopback-test
 
 loopback_SOURCES = loopback.c

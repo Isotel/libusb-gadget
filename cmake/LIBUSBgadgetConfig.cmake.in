@@ -1,0 +1,10 @@
+get_filename_component(LIBUSBgadget_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+list(APPEND CMAKE_MODULE_PATH ${LIBUSBgadget_CMAKE_DIR})
+
+if(NOT TARGET LIBUSBgadget::LIBUSBgadget)
+    include("${LIBUSBgadget_CMAKE_DIR}/LIBUSBgadgetTargets.cmake")
+endif()
+
+set(LIBUSBgadget_LIBRARIES LIBUSBgadget::LIBUSBgadget)

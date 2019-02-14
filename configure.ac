@@ -14,10 +14,12 @@ AC_CHECK_HEADERS([linux/usb/gadgetfs.h],
 
 pkgconfigdir='${libdir}/pkgconfig'
 AC_SUBST(pkgconfigdir)
-PKG_CHECK_MODULES([libusb], [libusb >= 0.1.12])
+#TODO make it work with libusb-1.0
+#PKG_CHECK_MODULES([libusb], [libusb >= 0.1.12])
 AC_CONFIG_HEADERS([src/config.h])
 AC_CONFIG_FILES([Makefile
 libusb-gadget.pc
+include/Makefile
 src/Makefile
 tests/Makefile
 scripts/Makefile])
